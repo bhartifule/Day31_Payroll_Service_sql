@@ -127,4 +127,48 @@ mysql> select * from employee_payroll where start between cast('2022-01-01' as D
 |  2 | Arati  |  50000 | 2022-05-12 |
 +----+--------+--------+------------+
 2 rows in set (0.02 sec)
-=======
+
+
+
+
+UC-6
+Ability to add Gender to Employee Payroll Table and Update the Rows to
+reflect the correct Employee Gender
+
+
+mysql> insert into Employee_Payroll(name,salary,start)values
+    -> ('Harsh','50000','2022-04-05');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from employee_payroll;
++----+--------+--------+------------+
+| id | name   | salary | start      |
++----+--------+--------+------------+
+|  1 | Bharti |  30000 | 2022-03-04 |
+|  2 | Arati  |  50000 | 2022-05-12 |
+|  3 | Shamal |  40000 | 2023-08-09 |
+|  4 | Harsh  |  50000 | 2022-04-05 |
++----+--------+--------+------------+
+4 rows in set (0.00 sec)
+
+mysql>  alter table Employee_Payroll add gender VARCHAR(6) after name;
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql>  update Employee_Payroll set gender = 'Female' where name = 'Bharti' or name = 'Arati' or name = 'Shamal';
+Query OK, 3 rows affected (0.02 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> update Employee_Payroll set gender = 'Male' where  name = 'Harsh';
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  select * from employee_payroll;
++----+--------+--------+--------+------------+
+| id | name   | gender | salary | start      |
++----+--------+--------+--------+------------+
+|  1 | Bharti | Female |  30000 | 2022-03-04 |
+|  2 | Arati  | Female |  50000 | 2022-05-12 |
+|  3 | Shamal | Female |  40000 | 2023-08-09 |
+|  4 | Harsh  | Male   |  50000 | 2022-04-05 |
++----+--------+--------+--------+------------+
+4 rows in set (0.00 sec)
