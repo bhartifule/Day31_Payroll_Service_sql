@@ -172,3 +172,65 @@ mysql>  select * from employee_payroll;
 |  4 | Harsh  | Male   |  50000 | 2022-04-05 |
 +----+--------+--------+--------+------------+
 4 rows in set (0.00 sec)
+ UC-7-CreateTable-Prrform-Max-Min-Coloum
+
+UC-7
+Ability to find sum, average, min, maxand number of male and female
+employees
+
+
+mysql> select SUM(salary) from Employee_Payroll
+    ->  where gender = 'Female' GROUP BY gender;
++-------------+
+| SUM(salary) |
++-------------+
+|      120000 |
++-------------+
+1 row in set (0.02 sec)
+
+mysql> select SUM(salary) from Employee_Payroll
+    -> where gender = 'Male' GROUP BY gender;
++-------------+
+| SUM(salary) |
++-------------+
+|       50000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql>  select AVG(salary) from Employee_Payroll
+    ->   GROUP BY gender;
++-------------+
+| AVG(salary) |
++-------------+
+|       40000 |
+|       50000 |
++-------------+
+2 rows in set (0.02 sec)
+
+mysql> select MIN(salary) from Employee_Payroll GROUP BY gender;
++-------------+
+| MIN(salary) |
++-------------+
+|       30000 |
+|       50000 |
++-------------+
+2 rows in set (0.00 sec)
+
+mysql> select MAX(salary) from Employee_Payroll GROUP BY gender;
++-------------+
+| MAX(salary) |
++-------------+
+|       50000 |
+|       50000 |
++-------------+
+2 rows in set (0.00 sec)
+
+mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
++-----------+
+| COUNT(id) |
++-----------+
+|         3 |
+|         1 |
++-----------+
+2 rows in set (0.00 sec)
+
