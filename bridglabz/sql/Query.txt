@@ -234,3 +234,40 @@ mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
 +-----------+
 2 rows in set (0.00 sec)
 
+
+
+UC-8
+Ability to extend employee_payroll data to
+store employee information like employee phone, address
+and department
+
+mysql> alter table employee_payroll
+    -> add column phone varchar(30) NOT NULL;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table employee_payroll
+    -> add column department varchar(30) NOT NULL;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table employee_payroll
+    -> add column address varchar(30) NOT NULL default "Bangalore";
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc employee_payroll;
++------------+--------------+------+-----+-----------+----------------+
+| Field      | Type         | Null | Key | Default   | Extra          |
++------------+--------------+------+-----+-----------+----------------+
+| id         | int unsigned | NO   | PRI | NULL      | auto_increment |
+| name       | varchar(15)  | NO   |     | NULL      |                |
+| gender     | varchar(6)   | YES  |     | NULL      |                |
+| salary     | double       | NO   |     | NULL      |                |
+| start      | date         | NO   |     | NULL      |                |
+| phone      | varchar(30)  | NO   |     | NULL      |                |
+| department | varchar(30)  | NO   |     | NULL      |                |
+| address    | varchar(30)  | NO   |     | Bangalore |                |
++------------+--------------+------+-----+-----------+----------------+
+8 rows in set (0.00 sec)
+=======
