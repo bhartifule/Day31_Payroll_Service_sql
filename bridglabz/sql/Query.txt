@@ -21,10 +21,11 @@ mysql> show databases;
 | user               |
 | world              |
 +--------------------+
+ UC-3-Create-Tabledatabase-Payroll-Database
+
 11 rows in set (0.00 sec)
 
- UC-2-Create-Table-Payroll-Database
-===============================================
+
 
 
 UC-2 Ability to create a employee payroll table
@@ -58,4 +59,29 @@ mysql> desc employee_payroll;
 | start  | date         | NO   |     | NULL    |                |
 +--------+--------------+------+-----+---------+----------------+
 4 rows in set (0.02 sec)
+
+
+
+
+UC-3
+Ability to create employee payroll data in the payroll service database as part of
+CRUD Operation
+==================
+
+mysql> insert into employee_payroll(name,salary,start)values
+    -> ('Bharti','30000.0','2022-03-04'),
+    -> ('Arati','50000.0','2022-05-12'),
+    -> ('Shamal','40000.0','2023-08-09');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+--------+--------+------------+
+| id | name   | salary | start      |
++----+--------+--------+------------+
+|  1 | Bharti |  30000 | 2022-03-04 |
+|  2 | Arati  |  50000 | 2022-05-12 |
+|  3 | Shamal |  40000 | 2023-08-09 |
++----+--------+--------+------------+
+3 rows in set (0.00 sec)
 
