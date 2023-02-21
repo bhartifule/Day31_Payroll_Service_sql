@@ -235,6 +235,7 @@ mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
 2 rows in set (0.00 sec)
 
 
+
 UC-8
 Ability to extend employee_payroll data to
 store employee information like employee phone, address
@@ -269,3 +270,4 @@ mysql> desc employee_payroll;
 | address    | varchar(30)  | NO   |     | Bangalore |                |
 +------------+--------------+------+-----+-----------+----------------+
 8 rows in set (0.00 sec)
+=======
