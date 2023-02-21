@@ -23,6 +23,7 @@ mysql> show databases;
 +--------------------+
 11 rows in set (0.00 sec)
 
+ UC-2-Create-Table-Payroll-Database
 ===============================================
 
 
@@ -57,3 +58,4 @@ mysql> desc employee_payroll;
 | start  | date         | NO   |     | NULL    |                |
 +--------+--------------+------+-----+---------+----------------+
 4 rows in set (0.02 sec)
+
