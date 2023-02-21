@@ -21,6 +21,8 @@ mysql> show databases;
 | user               |
 | world              |
 +--------------------+
+ 
+=======
  UC-3-Create-Tabledatabase-Payroll-Database
 
 11 rows in set (0.00 sec)
@@ -104,3 +106,25 @@ mysql> select * from employee_payroll;
 +----+--------+--------+------------+
 3 rows in set (0.00 sec)
 
+ UC-5-Create-Table-database-Payroll-service
+UC-5
+Ability to retrieve salary data for a particular employee as well as all employees who have
+joined in a particular data range from the payroll service database
+
+mysql> select * from employee_payroll
+    -> where name = 'Arati';
++----+-------+--------+------------+
+| id | name  | salary | start      |
++----+-------+--------+------------+
+|  2 | Arati |  50000 | 2022-05-12 |
++----+-------+--------+------------+
+1 row in set (0.02 sec)
+mysql> select * from employee_payroll where start between cast('2022-01-01' as DATE) and DATE(NOW());
++----+--------+--------+------------+
+| id | name   | salary | start      |
++----+--------+--------+------------+
+|  1 | Bharti |  30000 | 2022-03-04 |
+|  2 | Arati  |  50000 | 2022-05-12 |
++----+--------+--------+------------+
+2 rows in set (0.02 sec)
+=======
