@@ -1,6 +1,5 @@
 UC-1 Ability to create a payroll
 service database
-===================================
 
 
 mysql> create database payroll_service;
@@ -23,3 +22,4 @@ mysql> show databases;
 | world              |
 +--------------------+
 11 rows in set (0.00 sec)
+
