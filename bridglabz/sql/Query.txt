@@ -130,6 +130,7 @@ mysql> select * from employee_payroll where start between cast('2022-01-01' as D
 
 
 
+
 UC-6
 Ability to add Gender to Employee Payroll Table and Update the Rows to
 reflect the correct Employee Gender
