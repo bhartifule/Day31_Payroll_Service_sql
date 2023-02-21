@@ -172,6 +172,7 @@ mysql>  select * from employee_payroll;
 |  4 | Harsh  | Male   |  50000 | 2022-04-05 |
 +----+--------+--------+--------+------------+
 4 rows in set (0.00 sec)
+ UC-7-CreateTable-Prrform-Max-Min-Coloum
 
 UC-7
 Ability to find sum, average, min, maxand number of male and female
@@ -232,3 +233,4 @@ mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
 |         1 |
 +-----------+
 2 rows in set (0.00 sec)
+
