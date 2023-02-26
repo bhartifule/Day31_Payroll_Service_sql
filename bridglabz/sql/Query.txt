@@ -234,6 +234,7 @@ mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
 +-----------+
 2 rows in set (0.00 sec)
 
+UC-8-ExtendsEmployeeDataToStoreInf
 
 UC-8
 
@@ -347,3 +348,4 @@ mysql>  select * from Employee_Payroll;
 |  4 | Harsh  | 8978458748  | Male   |  50000 | 2022-04-05 |       | Analyst    | Bangalore |
 +----+--------+-------------+--------+--------+------------+-------+------------+-----------+
 4 rows in set (0.00 sec)
+=======
