@@ -234,6 +234,7 @@ mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
 +-----------+
 2 rows in set (0.00 sec)
 
+ UC10-AddTwoPersonDetail
 
 
 
