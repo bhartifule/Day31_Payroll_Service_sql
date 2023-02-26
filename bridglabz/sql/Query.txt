@@ -233,7 +233,7 @@ mysql>  select COUNT(id) from Employee_Payroll GROUP BY gender;
 |         1 |
 +-----------+
 2 rows in set (0.00 sec)
-
+ UC-11-ER-Diagram
  UC10-AddTwoPersonDetail
 
 
@@ -523,4 +523,4 @@ mysql> select count(Id) from employee_payroll;
 +-----------+
 |         6 |
 +-----------+
-1 row in set (0.02 sec)
+1 row in set (0
