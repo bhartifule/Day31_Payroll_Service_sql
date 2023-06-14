@@ -4,7 +4,7 @@ UC-1 Ability to create a payroll
 service database
 
 
-mysql> create database payroll_service;
+mysql> create database payroll_service; 
 Query OK, 1 row affected (0.02 sec)
 
 mysql> show databases;
