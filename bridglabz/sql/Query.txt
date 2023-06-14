@@ -13,7 +13,7 @@ mysql> show databases;
 | learn              |
 | mysql              |
 | payroll_service    |
-| performance_schema |
+| performance_schema | 
 | person             |
 | sakila             |
 | student            |
